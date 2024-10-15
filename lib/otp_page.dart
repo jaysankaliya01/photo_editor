@@ -5,7 +5,6 @@ class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _OtpPageState createState() => _OtpPageState();
 }
 
@@ -15,12 +14,36 @@ class _OtpPageState extends State<OtpPage> {
     (index) => TextEditingController(),
   );
 
+  final List<FocusNode> _focusNodes = List.generate(6, (index) => FocusNode());
+
   @override
   void dispose() {
     for (var controller in _otpControllers) {
       controller.dispose();
     }
+    for (var node in _focusNodes) {
+      node.dispose();
+    }
     super.dispose();
+  }
+
+  void _submitOtp() {
+    String enteredOtp = _otpControllers.map((controller) => controller.text).join();
+    if (enteredOtp.length == 6) {
+      // Log the entered OTP (for demo purposes, you can replace this with your verification logic)
+      print('Entered OTP: $enteredOtp');
+
+      // Navigate to the SignInPage after entering OTP
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const SignInPage()),
+      );
+    } else {
+      // Show a message if OTP is incomplete
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Please enter a complete OTP")),
+      );
+    }
   }
 
   @override
@@ -67,17 +90,30 @@ class _OtpPageState extends State<OtpPage> {
                   width: 40,
                   child: TextField(
                     controller: _otpControllers[index],
+                    focusNode: _focusNodes[index],
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
                     maxLength: 1,
                     decoration: InputDecoration(
+                      counterText: "", // Hide the counter for character length
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
                     onChanged: (value) {
                       if (value.isNotEmpty && index < 5) {
-                        FocusScope.of(context).nextFocus();
+                        FocusScope.of(context).nextFocus(); // Move to the next field
+                      } else if (value.isEmpty && index > 0) {
+                        FocusScope.of(context).previousFocus(); // Move back if empty
+                      }
+
+                      if (index == 5 && value.isNotEmpty) {
+                        _submitOtp(); // Submit OTP when the last digit is entered
+                      }
+                    },
+                    onSubmitted: (value) {
+                      if (index == 5) {
+                        _submitOtp(); // Submit OTP when the last field is submitted
                       }
                     },
                   ),
@@ -86,17 +122,7 @@ class _OtpPageState extends State<OtpPage> {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {
-                String enteredOtp = _otpControllers.map((controller) => controller.text).join();
-                // ignore: avoid_print
-                print('Entered OTP: $enteredOtp');
-
-                // Navigate to the SignInPage after entering OTP
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SignInPage()),
-                );
-              },
+              onPressed: _submitOtp, // Manually submit OTP
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.purple,
                 padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
