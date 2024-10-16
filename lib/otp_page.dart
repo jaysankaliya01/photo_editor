@@ -28,7 +28,8 @@ class _OtpPageState extends State<OtpPage> {
   }
 
   void _submitOtp() {
-    String enteredOtp = _otpControllers.map((controller) => controller.text).join();
+    String enteredOtp =
+        _otpControllers.map((controller) => controller.text).join();
     if (enteredOtp.length == 6) {
       // Log the entered OTP (for demo purposes, you can replace this with your verification logic)
       print('Entered OTP: $enteredOtp');
@@ -102,9 +103,11 @@ class _OtpPageState extends State<OtpPage> {
                     ),
                     onChanged: (value) {
                       if (value.isNotEmpty && index < 5) {
-                        FocusScope.of(context).nextFocus(); // Move to the next field
+                        FocusScope.of(context)
+                            .nextFocus(); // Move to the next field
                       } else if (value.isEmpty && index > 0) {
-                        FocusScope.of(context).previousFocus(); // Move back if empty
+                        FocusScope.of(context)
+                            .previousFocus(); // Move back if empty
                       }
 
                       if (index == 5 && value.isNotEmpty) {
@@ -125,7 +128,8 @@ class _OtpPageState extends State<OtpPage> {
               onPressed: _submitOtp, // Manually submit OTP
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.purple,
-                padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
