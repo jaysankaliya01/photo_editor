@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/colorizer.dart';
-import 'package:photo_editor/crop.dart';
-import 'package:photo_editor/edit_download.dart';
-import 'package:photo_editor/filter.dart';
+import 'package:photopy/colorizer.dart';
+import 'package:photopy/crop.dart';
+import 'package:photopy/edit_download.dart';
+import 'package:photopy/filter.dart';
 
 // Import your Adjust page here
 
@@ -36,8 +36,7 @@ class _AdjustPageState extends State<AdjustPage> {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => EditPhotoDownloadScreen()),
+                MaterialPageRoute(builder: (context) => EditPhotoDownloadScreen()),
               );
             }, // Add download functionality here
           ),
@@ -54,8 +53,7 @@ class _AdjustPageState extends State<AdjustPage> {
           Expanded(
             child: SingleChildScrollView(
               child: Container(
-                color:
-                    Color.fromARGB(255, 245, 186, 255), // Light pink background
+                color: Color.fromARGB(255, 245, 186, 255), // Light pink background
                 padding: EdgeInsets.all(8),
                 child: Column(
                   children: [
@@ -100,43 +98,30 @@ class _AdjustPageState extends State<AdjustPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildEditOption(
-                  Icons.brightness_4,
+                  Icons.brightness_4, 
                   'Adjust',
-                  isActive:
-                      true, // Highlight this icon since we're on the AdjustPage
+                  isActive: true, // Highlight this icon since we're on the AdjustPage
                 ),
                 _buildEditOption(Icons.color_lens, 'Colorizer', onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ColorizerPage()),
+                    MaterialPageRoute(builder: (context) => ColorizerPage()), 
                   );
                 }),
-                _buildEditOption(
-                  Icons.crop,
-                  'Crop',
-                  onTap: () {
+                _buildEditOption(Icons.crop, 'Crop',onTap: () {
                     // Navigate to the AdjustPage
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              CropPage()), // AdjestPage is the page you want to navigate to
+                      MaterialPageRoute(builder: (context) => CropPage()), // AdjestPage is the page you want to navigate to
                     );
-                  },
-                ),
-                _buildEditOption(
-                  Icons.filter_list,
-                  'Filters',
-                  onTap: () {
+                  },),
+                _buildEditOption(Icons.filter_list, 'Filters',onTap: () {
                     // Navigate to the AdjustPage
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              FilterPage()), // AdjestPage is the page you want to navigate to
+                      MaterialPageRoute(builder: (context) => FilterPage()), // AdjestPage is the page you want to navigate to
                     );
-                  },
-                ),
+                  },),
               ],
             ),
           ),
@@ -145,8 +130,7 @@ class _AdjustPageState extends State<AdjustPage> {
     );
   }
 
-  Widget _buildSlider(
-      String label, double value, ValueChanged<double> onChanged) {
+  Widget _buildSlider(String label, double value, ValueChanged<double> onChanged) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -161,8 +145,7 @@ class _AdjustPageState extends State<AdjustPage> {
     );
   }
 
-  Widget _buildEditOption(IconData icon, String label,
-      {bool isActive = false, Function()? onTap}) {
+  Widget _buildEditOption(IconData icon, String label, {bool isActive = false, Function()? onTap}) {
     return Column(
       children: [
         IconButton(
@@ -175,9 +158,7 @@ class _AdjustPageState extends State<AdjustPage> {
         Text(
           label,
           style: TextStyle(
-            color: isActive
-                ? Colors.blue
-                : Colors.black, // Change label color if active
+            color: isActive ? Colors.blue : Colors.black, // Change label color if active
           ),
         ),
       ],
