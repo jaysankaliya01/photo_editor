@@ -61,7 +61,7 @@ class _AdjustPageState extends State<AdjustPage> {
                   children: [
                     _buildSlider('Exposure', _exposure, (value) {
                       setState(() {
-                        _exposure = value;
+                        _exposure/+= value;
                       });
                     }),
                     _buildSlider('Contrast', _contrast, (value) {
