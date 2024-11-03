@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:photo_editor/background_remove.dart';
-import 'package:photo_editor/background_select.dart';
+import 'package:photo_editor/background_download.dart';
 import 'package:photo_editor/enhance_photo.dart';
 import 'package:photo_editor/select_edit.dart';
 import 'package:photo_editor/setting_page.dart';

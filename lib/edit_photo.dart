@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjest.dart';  // Corrected typo
+import 'package:photo_editor/adjust.dart';  // Corrected typo
 import 'package:photo_editor/colorizer.dart';
 import 'package:photo_editor/crop.dart';
 import 'package:photo_editor/edit_download.dart';
