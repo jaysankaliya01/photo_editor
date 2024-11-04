@@ -11,14 +11,7 @@ class AdjustPage extends StatefulWidget {
   _AdjustPageState createState() => _AdjustPageState();
 }
 
-class _AdjustPageState extends State<AdjustPage> {
-  // Define the state variables for sliders
-  double _exposure = 0.0;
-  double _contrast = 0.0;
-  double _highlights = 0.0;
-  double _shadows = 0.0;
-  double _whites = 0.0;
-  double _blacks = 0.0;
+
 
   @override
   Widget build(BuildContext context) {
