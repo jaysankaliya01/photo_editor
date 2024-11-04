@@ -6,16 +6,6 @@ import 'package:photo_editor/filter.dart';
 
 // Import your Adjust page here
 
-class ColorizerPage extends StatefulWidget {
-  @override
-  _ColorizerPageState createState() => _ColorizerPageState();
-}
-
-class _ColorizerPageState extends State<ColorizerPage> {
-  // Define the state variables for sliders
-  double _exposure = 0.0;
-  double _contrast = 0.0;
-  double _highlights = 0.0;
 
   @override
   Widget build(BuildContext context) {
