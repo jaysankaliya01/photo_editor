@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/background_download.dart';
+import 'package:photopy/background_download.dart';
 
 class RemoveBackgroundPage extends StatelessWidget {
   const RemoveBackgroundPage({Key? key}) : super(key: key);
 
-nter(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: const BackButton(),
+        title: const Text('Remove Background'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.download),
+            onPressed: () {
+              // Navigate to the BackgroundDownloadPage when the download button is clicked
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BackgroundDownloadPage()), // Ensure you replace with your actual download page class name
+              );
+            },
+          ),
+        ],
+      ),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
