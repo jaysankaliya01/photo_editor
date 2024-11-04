@@ -7,16 +7,7 @@ import 'package:photo_editor/filter.dart';
 // Import your Adjust page here
 
 class CropPage extends StatefulWidget {
-  @override
-  _CropPageState createState() => _CropPageState();
-}
-
-class _CropPageState extends State<CropPage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+ r(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
