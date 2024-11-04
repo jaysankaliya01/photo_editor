@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjust.dart';
-import 'package:photo_editor/crop.dart';
-import 'package:photo_editor/edit_download.dart';
-import 'package:photo_editor/filter.dart';
+import 'package:photopy/adjust.dart';
+import 'package:photopy/crop.dart';
+import 'package:photopy/edit_download.dart';
+import 'package:photopy/filter.dart';
 
 // Import your Adjust page here
 
+class ColorizerPage extends StatefulWidget {
+  @override
+  _ColorizerPageState createState() => _ColorizerPageState();
+}
+
+class _ColorizerPageState extends State<ColorizerPage> {
+  // Define the state variables for sliders
+  double _exposure = 0.0;
+  double _contrast = 0.0;
+  double _highlights = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -198,6 +208,3 @@ import 'package:photo_editor/filter.dart';
     );
   }
 }
-
-
-
