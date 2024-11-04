@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/colorizer.dart';
-import 'package:photo_editor/crop.dart';
-import 'package:photo_editor/edit_download.dart';
-import 'package:photo_editor/filter.dart';
+import 'package:photopy/colorizer.dart';
+import 'package:photopy/crop.dart';
+import 'package:photopy/edit_download.dart';
+import 'package:photopy/filter.dart';
 
 // Import your Adjust page here
 
@@ -11,7 +11,14 @@ class AdjustPage extends StatefulWidget {
   _AdjustPageState createState() => _AdjustPageState();
 }
 
-
+class _AdjustPageState extends State<AdjustPage> {
+  // Define the state variables for sliders
+  double _exposure = 0.0;
+  double _contrast = 0.0;
+  double _highlights = 0.0;
+  double _shadows = 0.0;
+  double _whites = 0.0;
+  double _blacks = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +59,7 @@ class AdjustPage extends StatefulWidget {
                   children: [
                     _buildSlider('Exposure', _exposure, (value) {
                       setState(() {
-                        _exposure= value;
+                        _exposure = value;
                       });
                     }),
                     _buildSlider('Contrast', _contrast, (value) {
