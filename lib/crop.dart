@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjust.dart';
-import 'package:photo_editor/colorizer.dart';
-import 'package:photo_editor/edit_download.dart';
-import 'package:photo_editor/filter.dart';
+import 'package:photopy/adjust.dart';
+import 'package:photopy/colorizer.dart';
+import 'package:photopy/edit_download.dart';
+import 'package:photopy/filter.dart';
 
 // Import your Adjust page here
 
 class CropPage extends StatefulWidget {
- r(
+  @override
+  _CropPageState createState() => _CropPageState();
+}
+
+class _CropPageState extends State<CropPage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
@@ -104,13 +113,3 @@ class CropPage extends StatefulWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
