@@ -9,17 +9,7 @@ class EditPhotoScreen extends StatelessWidget {
   const EditPhotoScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text('Edit Photo'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.download),
+  Wins.download),
             onPressed: () {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
