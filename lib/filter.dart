@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjust.dart';
-import 'package:photo_editor/colorizer.dart';
-import 'package:photo_editor/crop.dart';
-import 'package:photo_editor/edit_download.dart';
+import 'package:photopy/adjust.dart';
+import 'package:photopy/colorizer.dart';
+import 'package:photopy/crop.dart';
+import 'package:photopy/edit_download.dart';
 
 // Import your Adjust page here
 
@@ -11,7 +11,18 @@ class FilterPage extends StatefulWidget {
   _FilterPageState createState() => _FilterPageState();
 }
 
-cl
+class _FilterPageState extends State<FilterPage> {
+  // Add a boolean variable to track whether "Filters" is active
+  bool isFilterActive = true; // Set to true initially to light the Filters icon
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text('Edit Photo'),
         actions: [
           IconButton(
