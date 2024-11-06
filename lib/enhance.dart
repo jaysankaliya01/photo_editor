@@ -8,14 +8,7 @@ class EnhancePhotoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text("AI Photo Enhance"),
-      ),
-      body: Center(
+      
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
