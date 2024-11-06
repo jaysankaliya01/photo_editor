@@ -11,18 +11,7 @@ class FilterPage extends StatefulWidget {
   _FilterPageState createState() => _FilterPageState();
 }
 
-class _FilterPageState extends State<FilterPage> {
-  // Add a boolean variable to track whether "Filters" is active
-  bool isFilterActive = true; // Set to true initially to light the Filters icon
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
+cl
         title: Text('Edit Photo'),
         actions: [
           IconButton(
