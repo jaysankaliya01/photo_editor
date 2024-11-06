@@ -4,7 +4,18 @@ class EditPhotoDownloadScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     t(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: Text('Edit Photo'),
+        // Removed the download button from actions
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Image.asset(
               'assets/images/AllPhoto.png', // Replace with actual image path
               fit: BoxFit.cover,
             ),
