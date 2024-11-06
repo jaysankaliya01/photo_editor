@@ -10,6 +10,21 @@ class PhotoEnhancerPage extends StatefulWidget {
   _PhotoEnhancerPageState createState() => _PhotoEnhancerPageState();
 }
 
+class _PhotoEnhancerPageState extends State<PhotoEnhancerPage> {
+  final ImagePicker _picker = ImagePicker(); // Create an instance of ImagePicker
+  XFile? _image; // Variable to hold the selected image
+
+  Future<void> _selectPhoto() async {
+    // Pick an image from the gallery
+    final XFile? pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = pickedFile; // Set the selected image
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         leading: const BackButton(),
         title: const Text('AI Photo Enhancer'),
