@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjust.dart';
-import 'package:photo_editor/colorizer.dart';
-import 'package:photo_editor/crop.dart';
-import 'package:photo_editor/edit_download.dart';
-import 'package:photo_editor/filter.dart';
+import 'package:photopy/adjust.dart';
+import 'package:photopy/colorizer.dart';
+import 'package:photopy/crop.dart';
+import 'package:photopy/edit_download.dart';
+import 'package:photopy/filter.dart';
 
 class EditPhotoScreen extends StatelessWidget {
-
-  const EditPhotoScreen({super.key});
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +32,7 @@ class EditPhotoScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Image.asset(
-<<<<<<< HEAD
-              'assetsimages/AllPhoto.png', // Replace with the actual image path
-=======
               'assets/images/AllPhoto.png', // Replace with the actual image path
->>>>>>> a78d5d5f287ad7cea8bbf0aea788128c5f024e5f
               fit: BoxFit.cover,
             ),
           ),
