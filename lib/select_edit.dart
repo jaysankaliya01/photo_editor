@@ -88,7 +88,7 @@ class _PhotoEditPageState extends State<PhotoEditPage> {
                 // Navigate to EditPhotoScreen when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const EditPhotoScreen()),
+                  MaterialPageRoute(builder: (context) =>  EditPhotoScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(

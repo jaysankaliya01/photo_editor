@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:photopy/adjust.dart';
-import 'package:photopy/colorizer.dart';
-import 'package:photopy/crop.dart';
-import 'package:photopy/edit_download.dart';
-import 'package:photopy/filter.dart';
+import 'package:photo_editor/adjust.dart';
+import 'package:photo_editor/colorizer.dart';
+import 'package:photo_editor/crop.dart';
+import 'package:photo_editor/edit_download.dart';
+import 'package:photo_editor/filter.dart';
 
 class EditPhotoScreen extends StatelessWidget {
   @override
