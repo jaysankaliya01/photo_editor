@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editor/adjust.dart';  // Corrected typo
+import 'package:photo_editor/adjust.dart';
 import 'package:photo_editor/colorizer.dart';
 import 'package:photo_editor/crop.dart';
 import 'package:photo_editor/edit_download.dart';
 import 'package:photo_editor/filter.dart';
 
 class EditPhotoScreen extends StatelessWidget {
+ HEAD
   const EditPhotoScreen({super.key});
 
+a78d5d5f287ad7cea8bbf0aea788128c5f024e5f
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text('Edit Photo'),
+        title: Text('Edit Photo'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.download),
+            icon: Icon(Icons.download),
             onPressed: () {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) =>  EditPhotoDownloadScreen()),
+                MaterialPageRoute(builder: (context) => EditPhotoDownloadScreen()),
               );
             },
           ),
@@ -35,12 +36,16 @@ class EditPhotoScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Image.asset(
+<<<<<<< HEAD
               'assetsimages/AllPhoto.png', // Replace with the actual image path
+=======
+              'assets/images/AllPhoto.png', // Replace with the actual image path
+>>>>>>> a78d5d5f287ad7cea8bbf0aea788128c5f024e5f
               fit: BoxFit.cover,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -51,7 +56,7 @@ class EditPhotoScreen extends StatelessWidget {
                     // Navigate to the AdjustPage
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  AdjustPage()),
+                      MaterialPageRoute(builder: (context) => AdjustPage()),
                     );
                   },
                 ),
@@ -73,7 +78,7 @@ class EditPhotoScreen extends StatelessWidget {
                     // Navigate to the CropPage
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  CropPage()),
+                      MaterialPageRoute(builder: (context) => CropPage()),
                     );
                   },
                 ),
