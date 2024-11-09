@@ -6,7 +6,7 @@ import 'package:photo_editor/edit_download.dart';
 import 'package:photo_editor/filter.dart';
 
 class EditPhotoScreen extends StatelessWidget {
-  const EditPhotoScreen({Key? key}) : super(key: key);
+  const EditPhotoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class EditPhotoScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Image.asset(
-              'assets\images/AllPhoto.png', // Replace with the actual image path
+              'assetsimages/AllPhoto.png', // Replace with the actual image path
               fit: BoxFit.cover,
             ),
           ),

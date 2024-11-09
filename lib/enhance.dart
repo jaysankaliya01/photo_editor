@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'enhance_download.dart'; // Import your EnhanceDownload page
 
 class EnhancePhotoPage extends StatelessWidget {
-  const EnhancePhotoPage({Key? key}) : super(key: key);
+  const EnhancePhotoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +19,11 @@ class EnhancePhotoPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text("After"),
                   Text("Before"),
                 ],
@@ -39,7 +39,7 @@ class EnhancePhotoPage extends StatelessWidget {
                 // Navigate to the EnhanceDownload page when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EnhancePhotoDownloadPage()), // Ensure the page exists
+                  MaterialPageRoute(builder: (context) => const EnhancePhotoDownloadPage()), // Ensure the page exists
                 );
               },
               style: ElevatedButton.styleFrom(

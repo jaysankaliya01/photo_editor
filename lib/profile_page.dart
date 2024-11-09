@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'home_page.dart'; // Import the file where your PhotoEditor class is defined
 
 class PersonalInfo extends StatefulWidget {
-  const PersonalInfo({Key? key}) : super(key: key);
+  const PersonalInfo({super.key});
 
   @override
   State<PersonalInfo> createState() => _PersonalInfoState();

@@ -7,6 +7,8 @@ import 'package:photo_editor/edit_download.dart';
 // Import your Adjust page here
 
 class FilterPage extends StatefulWidget {
+  const FilterPage({super.key});
+
   @override
   _FilterPageState createState() => _FilterPageState();
 }
@@ -20,13 +22,13 @@ class _FilterPageState extends State<FilterPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text('Edit Photo'),
+        title: const Text('Edit Photo'),
         actions: [
           IconButton(
-            icon: Icon(Icons.download),
+            icon: const Icon(Icons.download),
             onPressed: () {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
@@ -47,8 +49,8 @@ class _FilterPageState extends State<FilterPage> {
           ),
           // Adjust the height of the pink box by removing the Expanded widget
           Container(
-            color: Color.fromARGB(255, 245, 186, 255), // Light pink background
-            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 8), // Adjust padding
+            color: const Color.fromARGB(255, 245, 186, 255), // Light pink background
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8), // Adjust padding
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -61,7 +63,7 @@ class _FilterPageState extends State<FilterPage> {
           ),
           // Move this directly after the pink box to remove extra space
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0), // Adjust padding to reduce space
+            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0), // Adjust padding to reduce space
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

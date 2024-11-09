@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'signup.dart'; // Make sure the path is correct
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,9 @@ class SettingsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // User Info Section
-            Row(
+            const Row(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.grey,
                   child: Text(
@@ -39,10 +39,10 @@ class SettingsPage extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Name',
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -150,13 +150,13 @@ class SettingsPage extends StatelessWidget {
                 // Navigate to the SignUpPage on logout
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignUpPage()), // Replace SignUpPage with the actual class name from signup.dart
+                  MaterialPageRoute(builder: (context) => const SignUpPage()), // Replace SignUpPage with the actual class name from signup.dart
                 );
               },
-              child: Row(
+              child: const Row(
                 children: [
                   Icon(Icons.logout, color: Colors.redAccent),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
                   Text(
                     'Logout',
                     style: TextStyle(color: Colors.redAccent, fontSize: 16),

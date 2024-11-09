@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:photo_editor/background_remove.dart';
 import 'package:photo_editor/background_download.dart';
+import 'package:photo_editor/background_select.dart';
 import 'package:photo_editor/enhance_photo.dart';
 import 'package:photo_editor/select_edit.dart';
 import 'package:photo_editor/setting_page.dart';
 
 class PhotoEditor extends StatefulWidget {
-  const PhotoEditor({Key? key}) : super(key: key);
+  const PhotoEditor({super.key});
 
   @override
   State<PhotoEditor> createState() => _PhotoEditorState();
@@ -30,8 +31,8 @@ class _PhotoEditorState extends State<PhotoEditor> {
             );
           },
         ),
-        title: Row(
-          children: const [
+        title: const Row(
+          children: [
             CircleAvatar(
               radius: 24,
               backgroundColor: Colors.grey,
@@ -72,7 +73,7 @@ class _PhotoEditorState extends State<PhotoEditor> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PhotoEditPage()),
+                  MaterialPageRoute(builder: (context) => const PhotoEditPage()),
                 );
               },
             ),
@@ -81,7 +82,7 @@ class _PhotoEditorState extends State<PhotoEditor> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PhotoEnhancerPage()),
+                  MaterialPageRoute(builder: (context) => const PhotoEnhancerPage()),
                 );
               },
             ),

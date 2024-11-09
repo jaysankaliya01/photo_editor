@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:photo_editor/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +32,7 @@ class _FirstPageState extends State<FirstPage> {
   @override
   void initState() {
     super.initState();
-    
+
     // Navigate to SignUpScreen after 3 seconds
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:photopy/adjust.dart';
-import 'package:photopy/crop.dart';
-import 'package:photopy/edit_download.dart';
-import 'package:photopy/filter.dart';
+import 'package:photo_editor/adjust.dart';
+import 'package:photo_editor/crop.dart';
+import 'package:photo_editor/edit_download.dart';
+import 'package:photo_editor/filter.dart';
 
 // Import your Adjust page here
 
 class ColorizerPage extends StatefulWidget {
+  const ColorizerPage({super.key});
+
   @override
   _ColorizerPageState createState() => _ColorizerPageState();
 }
@@ -22,13 +24,13 @@ class _ColorizerPageState extends State<ColorizerPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text('Edit Photo'),
+        title: const Text('Edit Photo'),
         actions: [
           IconButton(
-            icon: Icon(Icons.download),
+            icon: const Icon(Icons.download),
             onPressed: () {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
@@ -50,8 +52,8 @@ class _ColorizerPageState extends State<ColorizerPage> {
           Expanded(
             child: SingleChildScrollView(
               child: Container(
-                color: Color.fromARGB(255, 245, 186, 255), // Light pink background
-                padding: EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 245, 186, 255), // Light pink background
+                padding: const EdgeInsets.all(8),
                 child: Column(
                   children: [
                     _buildSlider('Hue', _exposure, (value) {
@@ -76,7 +78,7 @@ class _ColorizerPageState extends State<ColorizerPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -133,12 +135,12 @@ class _ColorizerPageState extends State<ColorizerPage> {
 
   Widget _buildColorMixRow() {
     return Container(
-      color: Color.fromARGB(255, 245, 186, 255), // Light pink background
-      padding: EdgeInsets.symmetric(vertical: 30, horizontal: 16),
+      color: const Color.fromARGB(255, 245, 186, 255), // Light pink background
+      padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Color Mix',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
@@ -158,7 +160,7 @@ class _ColorizerPageState extends State<ColorizerPage> {
             onTap: () {
               // Add functionality for Done button
             },
-            child: Text(
+            child: const Text(
               'Done',
               style: TextStyle(
                 fontSize: 18,

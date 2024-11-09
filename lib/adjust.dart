@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:photopy/colorizer.dart';
-import 'package:photopy/crop.dart';
-import 'package:photopy/edit_download.dart';
-import 'package:photopy/filter.dart';
+import 'package:photo_editor/colorizer.dart';
+import 'package:photo_editor/crop.dart';
+import 'package:photo_editor/edit_download.dart';
+import 'package:photo_editor/filter.dart';
 
 // Import your Adjust page here
 
 class AdjustPage extends StatefulWidget {
+  const AdjustPage({super.key});
+
   @override
   _AdjustPageState createState() => _AdjustPageState();
 }
@@ -25,13 +27,13 @@ class _AdjustPageState extends State<AdjustPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text('Edit Photo'),
+        title: const Text('Edit Photo'),
         actions: [
           IconButton(
-            icon: Icon(Icons.download),
+            icon: const Icon(Icons.download),
             onPressed: () {
               // Navigate to the EditPhotoDownload page
               Navigator.push(
@@ -53,8 +55,8 @@ class _AdjustPageState extends State<AdjustPage> {
           Expanded(
             child: SingleChildScrollView(
               child: Container(
-                color: Color.fromARGB(255, 245, 186, 255), // Light pink background
-                padding: EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 245, 186, 255), // Light pink background
+                padding: const EdgeInsets.all(8),
                 child: Column(
                   children: [
                     _buildSlider('Exposure', _exposure, (value) {
@@ -93,7 +95,7 @@ class _AdjustPageState extends State<AdjustPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

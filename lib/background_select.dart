@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart'; // Import image_picker
-import 'package:photopy/background_remove.dart';
+import 'package:photo_editor/background_remove.dart';
 
 class BackgroundSelectPage extends StatefulWidget {
-  const BackgroundSelectPage({Key? key}) : super(key: key);
+  const BackgroundSelectPage({super.key});
 
   @override
   _BackgroundSelectPageState createState() => _BackgroundSelectPageState();
@@ -51,7 +51,7 @@ class _BackgroundSelectPageState extends State<BackgroundSelectPage> {
                   color: Colors.purple[200],
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Center(
+                child: const Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -61,7 +61,7 @@ class _BackgroundSelectPageState extends State<BackgroundSelectPage> {
                         color: Colors.white,
                       ),
                       SizedBox(height: 8),
-                      const Text(
+                      Text(
                         'Select Photo',
                         style: TextStyle(
                           color: Colors.white,
@@ -79,7 +79,7 @@ class _BackgroundSelectPageState extends State<BackgroundSelectPage> {
                 // Navigate to EnhancePage when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RemoveBackgroundPage()),
+                  MaterialPageRoute(builder: (context) => const RemoveBackgroundPage()),
                 );
               },
               style: ElevatedButton.styleFrom(

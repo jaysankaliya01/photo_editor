@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BackgroundDownloadPage extends StatelessWidget {
-  const BackgroundDownloadPage({Key? key}) : super(key: key);
+  const BackgroundDownloadPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,11 @@ class BackgroundDownloadPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   // Text("After"),
                   // Text("Before"),
                 ],
@@ -46,17 +46,19 @@ class BackgroundDownloadPage extends StatelessWidget {
 
 // Custom "Saved To Gallery" button widget
 class CustomSaveButton extends StatelessWidget {
+  const CustomSaveButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 180,
       height: 50,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 252, 176, 252), // Pink background
+        color: const Color.fromARGB(255, 252, 176, 252), // Pink background
         borderRadius: BorderRadius.circular(30),
         border: Border.all(color: Colors.purpleAccent, width: 2),
       ),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(

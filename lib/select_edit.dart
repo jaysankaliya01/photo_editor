@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:photo_editor/edit_photo.dart';
 
 class PhotoEditPage extends StatefulWidget {
-  const PhotoEditPage({Key? key}) : super(key: key);
+  const PhotoEditPage({super.key});
 
   @override
   _PhotoEditPageState createState() => _PhotoEditPageState();
@@ -88,7 +88,7 @@ class _PhotoEditPageState extends State<PhotoEditPage> {
                 // Navigate to EditPhotoScreen when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EditPhotoScreen()),
+                  MaterialPageRoute(builder: (context) => const EditPhotoScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(

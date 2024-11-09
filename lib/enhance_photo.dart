@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart'; // Import image_picker
 import 'enhance.dart'; // Make sure the path is correct based on your folder structure
 
 class PhotoEnhancerPage extends StatefulWidget {
-  const PhotoEnhancerPage({Key? key}) : super(key: key);
+  const PhotoEnhancerPage({super.key});
 
   @override
   _PhotoEnhancerPageState createState() => _PhotoEnhancerPageState();
@@ -52,7 +52,7 @@ class _PhotoEnhancerPageState extends State<PhotoEnhancerPage> {
                   color: Colors.purple[200],
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Center(
+                child: const Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -62,7 +62,7 @@ class _PhotoEnhancerPageState extends State<PhotoEnhancerPage> {
                         color: Colors.white,
                       ),
                       SizedBox(height: 8),
-                      const Text(
+                      Text(
                         'Select Photo',
                         style: TextStyle(
                           color: Colors.white,
@@ -80,7 +80,7 @@ class _PhotoEnhancerPageState extends State<PhotoEnhancerPage> {
                 // Navigate to EnhancePage when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EnhancePhotoPage()),
+                  MaterialPageRoute(builder: (context) => const EnhancePhotoPage()),
                 );
               },
               style: ElevatedButton.styleFrom(
