@@ -1,0 +1,26 @@
+[debug] [2024-11-14T04:05:47.676Z] ----------------------------------------------------------------------
+[debug] [2024-11-14T04:05:47.679Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pramit\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list --json
+[debug] [2024-11-14T04:05:47.680Z] CLI Version:   13.16.0
+[debug] [2024-11-14T04:05:47.680Z] Platform:      win32
+[debug] [2024-11-14T04:05:47.680Z] Node Version:  v20.17.0
+[debug] [2024-11-14T04:05:47.680Z] Time:          Thu Nov 14 2024 09:35:47 GMT+0530 (India Standard Time)
+[debug] [2024-11-14T04:05:47.681Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-14T04:05:47.685Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-11-14T04:05:47.835Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"flutter"}
+[debug] [2024-11-14T04:05:47.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-14T04:05:47.841Z] > authorizing via signed-in user (pdalki777@rku.ac.in)
+[debug] [2024-11-14T04:05:47.845Z] > refreshing access token with scopes: []
+[debug] [2024-11-14T04:05:47.846Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-14T04:05:47.847Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-14T04:05:47.852Z] Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:18)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Ora.start (C:\Users\pramit\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\ora\index.js:304:17)
+    at Command.actionFn (C:\Users\pramit\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\projects-list.js:48:73)
+    at C:\Users\pramit\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:228:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
